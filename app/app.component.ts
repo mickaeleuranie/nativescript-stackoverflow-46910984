@@ -4,19 +4,7 @@ import { ListView } from "ui/list-view";
 
 @Component({
   selector: "my-app",
-  template: `
-    <ActionBar title="Stackoverflow 46910984" class="action-bar"></ActionBar>
-    <!-- Your UI components go here -->
-    <StackLayout>
-      <ListView id="listviewId" [items]="items" class="list-group">
-        <ng-template let-item="item" let-i="index">
-          <StackLayout id="stackId">
-            <Label [textWrap]="false" [id]="'label' + i" [text]="item.data" (tap)="toggle($event)"></Label>
-          </StackLayout>
-        </ng-template>
-      </ListView>
-    </StackLayout>
-  `
+  templateUrl: "app.component.html"
 })
 export class AppComponent {
   public items: Array<any>;
